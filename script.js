@@ -35,12 +35,12 @@ video.addEventListener('play', () => {
     const lipHeight = bottomMouth - topMouth;
     const overlay = document.getElementById('lips');
     overlay.style.cssText = `
-      width: ${lipWidth+10}px;
+      width: ${lipWidth+15}px;
       height: ${lipHeight}px;
-      left: calc(50% - ${325-leftCornerMouth}px);
+      left: calc(50% - ${323-leftCornerMouth}px);
       top: calc(50% - ${235-topMouth}px);
       background: purple;
-      border-radius: 75%;
+      border-radius: 80%;
       opacity: 0.35;
       position: absolute;`;
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
