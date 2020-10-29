@@ -14,8 +14,11 @@ function startVideo() {
   )
 }
 
+let lipSwatch = 'purple'
+
 function getSwatch(swatch) {
-  console.info(`swatch ${swatch}`)
+  console.info(`updated with swatch ${swatch}`)
+  lipSwatch = swatch
 }
 
 video.addEventListener('play', () => {
@@ -43,7 +46,7 @@ video.addEventListener('play', () => {
       height: ${lipHeight}px;
       left: calc(50% - ${323-leftCornerMouth}px);
       top: calc(50% - ${235-topMouth}px);
-      background: purple;
+      background: #${lipSwatch};
       border-radius: 80%;
       opacity: 0.35;
       position: absolute;`;
