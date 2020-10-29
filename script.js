@@ -14,6 +14,12 @@ function startVideo() {
   )
 }
 
+let lipColor = '551b34';
+function getSwatch(swatch) {
+  console.info(`swatch ${swatch}`)
+  lipColor = swatch;
+}
+
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video)
   const overlayInsert = document.createElement('div')
@@ -35,13 +41,13 @@ video.addEventListener('play', () => {
     const lipHeight = bottomMouth - topMouth;
     const overlay = document.getElementById('lips');
     overlay.style.cssText = `
-      width: ${lipWidth+15}px;
-      height: ${lipHeight}px;
-      left: calc(50% - ${323-leftCornerMouth}px);
-      top: calc(50% - ${235-topMouth}px);
-      background: purple;
+      width: ${lipWidth+20}px;
+      height: ${lipHeight+2}px;
+      left: calc(50% - ${328-leftCornerMouth}px);
+      top: calc(50% - ${231-topMouth}px);
+      background: #${lipColor};
       border-radius: 80%;
-      opacity: 0.35;
+      opacity: 0.4;
       position: absolute;`;
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
