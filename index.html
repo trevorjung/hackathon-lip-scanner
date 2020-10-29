@@ -22,39 +22,112 @@
       position: absolute;
     }
 
+    .header {
+      text-align: center;
+      color: #231f20;
+      font-size: 30px;
+      top: 10px;
+      position: absolute;
+    } 
+
     .color-select {
-      width: 500px;
+      width: 600px;
       height: 24px;
       position: absolute;
-      bottom: 200px
+      bottom: 100px;
+      margin-bottom: 15px;
+      margin-top: 50px;
+    }
+
+    .grouping{
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      padding-left: 32px;
+      margin-bottom: 15px;
+      align-content: center;
+      margin-top: 10px;
+      text-align: center;
     }
 
     .swatch {
-      float: left;
-      width: 24px;
-      height: 24px;
-      margin-left: 32px;
-      margin-bottom: 15px;
-      margin-top: 50px;
+      width: 69px;
+      height: 40px;
+      padding-left: 0px;
+      align-content: center;
+      margin-left: 5px;
+    }
+
+    .swatch-label {
+      display: table-caption;
+      padding: 1px;
+      width: 35px;
+      color: white;
     }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>Beyond Gloss Virtual Try On</h1>
+  </div>
   <div class="color-select">
-    <button class="swatch" style="background-color: #e09874;" onclick="getSwatch('e09874')" />
-    <button class="swatch" style="background-color: #e5e3db;" onclick="getSwatch('e5e3db')" />
-    <button class="swatch" style="background-color: #803146;" onclick="getSwatch('803146')" />
-    <button class="swatch" style="background-color: #cc7150;" onclick="getSwatch('cc7150')" />
-    <button class="swatch" style="background-color: #924c42;" onclick="getSwatch('924c42')" />
-    <button class="swatch" style="background-color: #e97b6c;" onclick="getSwatch('e97b6c')" />
-    <button class="swatch" style="background-color: #f2757b;" onclick="getSwatch('f2757b')" />
-    <button class="swatch" style="background-color: #db255b;" onclick="getSwatch('db255b')" />
-    <button class="swatch" style="background-color: #e96a88;" onclick="getSwatch('e96a88')" />
-    <button class="swatch" style="background-color: #551b34;" onclick="getSwatch('551b34')" />
-    <button class="swatch" style="background-color: #e37e8e;" onclick="getSwatch('e37e8e')" />
-    <button class="swatch" style="background-color: #96483c;" onclick="getSwatch('96483c')" />
-    <button class="swatch" style="background-color: #80291c;" onclick="getSwatch('80291c')" />
-    <button class="swatch" style="background-color: #bf725f;" onclick="getSwatch('bf725f')" />
+    <div class="grouping">
+      <button class="swatch" style="background-color: #e09874;" onclick="getSwatch('e09874')" />
+      <label class="swatch-label">Brûlée</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #e5e3db;" onclick="getSwatch('e5e3db')" />
+      <label class="swatch-label">Quartz Shimmer</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #803146;" onclick="getSwatch('803146')" />
+      <label class="swatch-label">Mulberry</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #cc7150;" onclick="getSwatch('cc7150')" />
+      <label class="swatch-label">Spice</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #924c42;" onclick="getSwatch('924c42')" />
+      <label class="swatch-label">Rosewood</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #e97b6c;" onclick="getSwatch('e97b6c')" />
+      <label class="swatch-label">Bare Shimmer</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #f2757b;" onclick="getSwatch('f2757b')" />
+      <label class="swatch-label">Peony</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #db255b;" onclick="getSwatch('db255b')" />
+      <label class="swatch-label">Raspberry</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #e96a88;" onclick="getSwatch('e96a88')" />
+      <label class="swatch-label">Dahlia</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #551b34;" onclick="getSwatch('551b34')" />
+      <label class="swatch-label">Black Plum</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #e37e8e;" onclick="getSwatch('e37e8e')" />
+      <label class="swatch-label">Magnolia Shimmer</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #96483c;" onclick="getSwatch('96483c')" />
+      <label class="swatch-label">Sienna</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #80291c;" onclick="getSwatch('80291c')" />
+      <label class="swatch-label">Amber Shimmer</label>
+    </div>
+    <div class="grouping">
+      <button class="swatch" style="background-color: #bf725f;" onclick="getSwatch('bf725f')" />
+      <label class="swatch-label">Clove</label>
+    </div>
   </div>
   <video id="video" width="720" height="560" autoplay muted></video>
 </body>
