@@ -14,18 +14,10 @@ function startVideo() {
   )
 }
 
-<<<<<<< HEAD
-let lipSwatch = 'purple'
-
-function getSwatch(swatch) {
-  console.info(`updated with swatch ${swatch}`)
-  lipSwatch = swatch
-=======
 let lipColor = '551b34';
 function getSwatch(swatch) {
   console.info(`swatch ${swatch}`)
   lipColor = swatch;
->>>>>>> 8f2544c9baaec00f3addae4a43ad6d63c20e9b17
 }
 
 video.addEventListener('play', () => {
@@ -49,19 +41,11 @@ video.addEventListener('play', () => {
     const lipHeight = bottomMouth - topMouth;
     const overlay = document.getElementById('lips');
     overlay.style.cssText = `
-<<<<<<< HEAD
-      width: ${lipWidth+15}px;
-      height: ${lipHeight}px;
-      left: calc(50% - ${323-leftCornerMouth}px);
-      top: calc(50% - ${235-topMouth}px);
-      background: #${lipSwatch};
-=======
       width: ${lipWidth+20}px;
       height: ${lipHeight+2}px;
       left: calc(50% - ${328-leftCornerMouth}px);
       top: calc(50% - ${231-topMouth}px);
       background: #${lipColor};
->>>>>>> 8f2544c9baaec00f3addae4a43ad6d63c20e9b17
       border-radius: 80%;
       opacity: 0.4;
       position: absolute;`;
