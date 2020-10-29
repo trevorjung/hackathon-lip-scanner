@@ -14,6 +14,10 @@ function startVideo() {
   )
 }
 
+function getSwatch(swatch) {
+  console.info(`swatch ${swatch}`)
+}
+
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video)
   const overlayInsert = document.createElement('div')
