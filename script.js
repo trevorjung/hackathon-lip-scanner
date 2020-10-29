@@ -39,14 +39,16 @@ video.addEventListener('play', () => {
     const lipHeight = bottomMouth - topMouth;
     const overlay = document.getElementById('lips');
     overlay.style.cssText = `
-      width: ${lipWidth}px;
+      width: ${lipWidth+15}px;
       height: ${lipHeight}px;
-      right: ${leftCornerMouth}px;
-      bottom: ${topMouth}px;
-      background: red;
-      border-radius: 50%;`;
+      left: calc(50% - ${323-leftCornerMouth}px);
+      top: calc(50% - ${235-topMouth}px);
+      background: purple;
+      border-radius: 80%;
+      opacity: 0.35;
+      position: absolute;`;
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
-    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
+    // faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
   }, 100)
 })
