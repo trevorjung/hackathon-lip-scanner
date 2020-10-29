@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Beyond Genius</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
   <style>
@@ -21,9 +21,39 @@
     canvas {
       position: absolute;
     }
+
+    .color-select {
+      width: 500px;
+      height: 24px;
+    }
+
+    .swatch {
+      float: left;
+      width: 24px;
+      height: 24px;
+      margin-left: 32px
+    }
   </style>
 </head>
 <body>
+  <div class="color-select">
+    <div class="swatch" style="background-color: #e09874;" />
+    <div class="swatch" style="background-color: #e5e3db;" />
+    <div class="swatch" style="background-color: #803146;" />
+    <div class="swatch" style="background-color: #cc7150;" />
+    <div class="swatch" style="background-color: #924c42;" />
+    <div class="swatch" style="background-color: #e97b6c;" />
+    <div class="swatch" style="background-color: #f2757b;" />
+    <div class="swatch" style="background-color: #db255b;" />
+    <div class="swatch" style="background-color: #e96a88;" />
+    <div class="swatch" style="background-color: #551b34;" />
+    <div class="swatch" style="background-color: #e37e8e;" />
+    <div class="swatch" style="background-color: #96483c;" />
+    <div class="swatch" style="background-color: #80291c;" />
+    <div class="swatch" style="background-color: #bf725f;" />
+    <div class="swatch" style="background-color: #bf725f;" />
+    <div class="swatch" style="background-color: #bf725f;" />
+  </div>
   <video id="video" width="720" height="560" autoplay muted></video>
 </body>
 </html>

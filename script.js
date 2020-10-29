@@ -41,7 +41,6 @@ video.addEventListener('play', () => {
       bottom: ${topMouth}px;
       background: red;
       border-radius: 50%;`;
-    console.log(cssText);
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
